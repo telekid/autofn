@@ -5,5 +5,5 @@
     "test": "node --test"
   },
   "type": "module",
-  "license": "UNLICENSED"
+  "version": "0.0.1"
 }
