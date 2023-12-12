@@ -1,0 +1,1 @@
+{ "presets": [], "plugins": ["../babel_plugin/index.js"] }

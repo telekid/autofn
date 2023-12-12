@@ -1,24 +1,25 @@
 import { test } from "node:test";
-import * as parser from "@babel/parser";
+import assert from "node:assert";
 import { transform } from "@babel/core";
 
-import _generate from "@babel/generator";
-const generate = _generate.default;
-import assert from "node:assert";
 import xfm from "../index.js";
 
 const config = { plugins: [xfm] };
 test("basic transform", (t) => {
-  const example = `
+  assert.equal(
+    transform(
+      `
     // autofn: Returns the square of \`n\`
     async function square(n) {}
-    `;
-
-  const { code } = transform(example, config);
+    `,
+      config
+    ).code,
+    '// autofn: Returns the square of `n`\nasync function square(n) {\n  return gpt("Returns the square of `n`", ["n"], [n]);\n}'
+  );
 
   assert.equal(
-    code,
-    '// autofn: Returns the square of `n`\nasync function square(n) {\n  return gpt("Returns the square of `n`", ["n"], [n]);\n}'
+    transform(`function square(n) {}`, config).code,
+    `function square(n) {}`
   );
 
   assert.throws(

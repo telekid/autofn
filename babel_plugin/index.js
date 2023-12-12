@@ -38,6 +38,11 @@ export default function xfm(babel) {
         enter(path) {
           const comments = path.node.leadingComments;
           let match;
+
+          if (comments == null) {
+            return;
+          }
+
           for (const comment of comments) {
             const res = comment.value.match(target_re);
             if (res != null) {
@@ -51,25 +56,18 @@ export default function xfm(babel) {
               throw path.buildCodeFrameError("Function must be async.");
             }
             if (path.node.body.body.length != 0) {
-              // TODO: Test this
               throw path.buildCodeFrameError("Function body must be empty.");
             }
-            // path.node.body.replaceWith(newNode);
-
             const args = path.node.params.map((param) => param.name);
             const newNode = createCallGptNode(
               babel.types,
-              // TODO: Get identifier from outer scope
               "gpt",
               match.docstring,
               args
             );
 
             path.node.body = newNode;
-            // console.log(path.node.body.body);
-            // path.traverse(updateBodyVisitor(babel));
           }
-          // console.log("enter!", path.node.leadingComments);
         },
       },
     },
