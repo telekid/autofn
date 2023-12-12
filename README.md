@@ -34,3 +34,14 @@ _This is a proof of concept. Only fools will use it in production. (There are ma
 1. Add `autofn-babel` as a babel plugin.
 2. Import `autofn-runtime` to your app's entrypoint.
 3. That's it.
+
+### TODO
+
+Lots of ideas.
+
+ - [ ] Memoize results
+   - [ ] In-process memoization
+   - [ ] Filesystem-backed memoization
+ - [ ] Use TypeScript and Flow type information as hints
+ - [ ] Convert to TypeScript project
+ - [ ] Design mechanism for configuring model on a per-fn basis
