@@ -1,6 +1,8 @@
-## autofn: a hack
+## autofn: write JS functions but leave out the body
 
 Write JavaScript functions but leave out the body. Describe the function's operation in a (currently single-line) comment prefixed by `autofn:`. Let ChatGPT do the rest!
+
+**Note: This is a proof-of-concept.**
 
 ```javascript
 import "autofn-runtime";
@@ -23,6 +25,10 @@ console.log(result);
 // ['call mom', 'make dr appointment', 'dishes', 'laundry', 'submit performance review']
 ```
 
+See the [example project](example/src/index.js) for a working example.
+
+---
+
 ### Q&A
 
 **Is this a good idea?**
@@ -37,9 +43,13 @@ Ooooooooh no. The code is a proof-of-concept (AKA "trash") that I hacked togethe
 
 Absolutely! I'll try to review with a light touch.
 
+---
+
 ### Requirements
 
 `autofn` requires Node and Babel.
+
+---
 
 ### Usage
 
@@ -47,6 +57,8 @@ Absolutely! I'll try to review with a light touch.
 2. Add [`autofn-runtime`](https://www.npmjs.com/package/autofn-runtime) as a project dependency and add `import "autofn-runtime";` to the top of your app's entrypoint.
 3. Set the `OPENAI_API_KEY` environment variable.
 4. Have fun!
+
+---
 
 ### Next steps
 
