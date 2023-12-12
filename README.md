@@ -31,9 +31,10 @@ Node and Babel.
 
 _This is a proof of concept. Only fools will use it in production. (There are many fools among us...)_
 
-1. Add `autofn-babel` as a babel plugin.
-2. Import `autofn-runtime` to your app's entrypoint.
-3. That's it.
+1. Add [`autofn-babel`](https://www.npmjs.com/package/autofn-babel) as a babel plugin.
+2. Import [`autofn-runtime`](https://www.npmjs.com/package/autofn-runtime) to your app's entrypoint.
+3. Set the `OPENAI_API_KEY` environment variable.
+4. Have fun!
 
 ### TODO
 
