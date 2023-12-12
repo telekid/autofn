@@ -1,13 +1,10 @@
 {
-  "name": "jsmagic",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "name": "autofn-babel",
+  "main": "src/index.js",
   "scripts": {
     "test": "node --test"
   },
   "type": "module",
-  "author": "",
   "license": "UNLICENSED",
   "dependencies": {
     "@babel/core": "^7.23.6",

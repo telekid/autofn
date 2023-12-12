@@ -1,0 +1,10 @@
+{
+  "name": "autofn",
+  "version": "0.0.1",
+  "description": "Write JavaScript functions but leave out the body. Let ChatGPT do the work!",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run test --workspaces"
+  },
+  "workspaces": ["autofn-babel", "autofn-runtime"]
+}

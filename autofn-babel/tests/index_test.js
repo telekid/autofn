@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert";
 import { transform } from "@babel/core";
 
-import xfm from "../index.js";
+import xfm from "../src/index.js";
 
 const config = { plugins: [xfm] };
 test("basic transform", (t) => {
