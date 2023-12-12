@@ -45,3 +45,4 @@ Lots of ideas.
  - [ ] Use TypeScript and Flow type information as hints
  - [ ] Convert to TypeScript project
  - [ ] Design mechanism for configuring model on a per-fn basis
+ - [ ] Come up with way to quickly "expand" a remote function into a local one
