@@ -1,21 +1,5 @@
-import * as parser from "@babel/parser";
-import _traverse from "@babel/traverse";
-const traverse = _traverse.default;
-
 // Reference:
 // https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md
-
-function updateBodyVisitor({ types: t }) {
-  return {
-    BlockStatement: {
-      exit(path) {
-        const newNode = t.BlockStatement([]);
-
-        path.replaceWith(newNode);
-      },
-    },
-  };
-}
 
 const target_re = /\s*autofn: (?<docstring>.*)$/;
 
@@ -61,7 +45,7 @@ export default function xfm(babel) {
             const args = path.node.params.map((param) => param.name);
             const newNode = createCallGptNode(
               babel.types,
-              "gpt",
+              "globalThis.gpt",
               match.docstring,
               args
             );

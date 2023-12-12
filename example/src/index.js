@@ -1,10 +1,17 @@
-import { init, gpt } from "runtime";
+import "autofn-runtime";
 
-init();
+// autofn: Groups `todos` into `categories`. Then, return todos as a flattened array in the order specified by `categories`.
+async function sortTodos(todos, categories) {}
 
-// autofn: Returns string representing current president in given `year`.
-async function prezInYear(year) {}
+const result = await sortTodos(
+  [
+    "dishes",
+    "laundry",
+    "submit performance review",
+    "call mom",
+    "make dr appointment",
+  ],
+  ["phone", "house chores", "work"]
+);
 
-const result = await prezInYear(2020);
-
-console.log("res", result);
+console.log(result);

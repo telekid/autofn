@@ -1,1 +1,1 @@
-{ "presets": [], "plugins": ["../babel_plugin/index.js"] }
+{ "presets": [], "plugins": ["../autofn-babel/index.js"] }

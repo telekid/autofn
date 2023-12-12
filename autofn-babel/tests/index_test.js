@@ -14,7 +14,7 @@ test("basic transform", (t) => {
     `,
       config
     ).code,
-    '// autofn: Returns the square of `n`\nasync function square(n) {\n  return gpt("Returns the square of `n`", ["n"], [n]);\n}'
+    '// autofn: Returns the square of `n`\nasync function square(n) {\n  return globalThis.gpt("Returns the square of `n`", ["n"], [n]);\n}'
   );
 
   assert.equal(

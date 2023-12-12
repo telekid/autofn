@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx babel src --out-dir lib && node lib/index.js"
+    "start": "rm -Rf lib && npx babel src --out-dir lib && node lib/index.js"
   },
   "type": "module",
   "author": "",
@@ -14,6 +13,7 @@
     "@babel/cli": "^7.23.4"
   },
   "dependencies": {
-    "runtime": "file:../runtime"
+    "@babel/core": "^7.23.6",
+    "autofn-runtime": "file:../autofn-runtime"
   }
 }

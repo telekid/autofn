@@ -1,9 +1,21 @@
-import { init, gpt } from "runtime";
-init();
+import "autofn-runtime";
 
-// autofn: Returns string representing current president in given `year`.
-async function prezInYear(year) {
-  return gpt("Returns string representing current president in given `year`.", ["year"], [year]);
+// autofn: Groups `todos` into `categories`. Then, return todos as a flattened array in the order specified by `categories`.
+async function sortTodos(todos, categories) {
+  return globalThis.gpt(
+    "Groups `todos` into `categories`. Then, return todos as a flattened array in the order specified by `categories`.",
+    ["todos", "categories"],
+    [todos, categories]
+  );
 }
-const result = await prezInYear(2020);
-console.log("res", result);
+const result = await sortTodos(
+  [
+    "dishes",
+    "laundry",
+    "submit performance review",
+    "call mom",
+    "make dr appointment",
+  ],
+  ["phone", "house chores", "work"]
+);
+console.log(result);

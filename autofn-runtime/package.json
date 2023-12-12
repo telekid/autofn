@@ -1,5 +1,5 @@
 {
-  "name": "runtime",
+  "name": "autofn-runtime",
   "version": "0.0.1",
   "description": "",
   "main": "src/index.js",
