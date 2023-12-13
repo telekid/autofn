@@ -33,7 +33,7 @@ See the [example project](example/src/index.js) for a working example.
 
 **Is this a good idea?**
 
-No clue.
+There are a number of other ways of accomplishing this that may be better. In particular, it would be worth investigating a decorator / reflection-based implementation. (Babel is a big hammer.)
 
 **Is it production ready?**
 
