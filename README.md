@@ -1,4 +1,4 @@
-## autofn: write JS functions but leave out the body
+## autofn: normal JS functions backed by ChatGPT
 
 Write JavaScript functions but leave out the body. Describe the function's operation in a (currently single-line) comment prefixed by `autofn:`. Let ChatGPT do the rest!
 
